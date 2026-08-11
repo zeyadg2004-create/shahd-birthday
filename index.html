@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>عيد ميلاد شهد 🎂❤️</title>
+<title>عيد ميلاد شهد 🎂🤍</title>
 
 <style>
 
@@ -22,12 +22,12 @@ html{
 body{
     font-family:Tahoma,Arial,sans-serif;
     min-height:100vh;
-    color:white;
+    color:#fff;
     overflow-x:hidden;
     background:#09000f;
 }
 
-/* ================= الخلفية ================= */
+/* الخلفية */
 
 .background{
     position:fixed;
@@ -36,62 +36,45 @@ body{
     overflow:hidden;
 
     background:
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(170,75,145,.35),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 80% 80%,
-            rgba(85,70,170,.30),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #08000d,
-            #19091f,
-            #09000f
-        );
+        radial-gradient(circle at 15% 20%,rgba(190,85,155,.32),transparent 35%),
+        radial-gradient(circle at 85% 75%,rgba(85,75,180,.28),transparent 40%),
+        linear-gradient(135deg,#07000c,#1a0a20,#08000e);
 }
-
-/* دوائر الضوء */
 
 .glow{
     position:absolute;
-    width:300px;
-    height:300px;
+    width:330px;
+    height:330px;
     border-radius:50%;
-    filter:blur(90px);
-    opacity:.35;
-    animation:moveGlow 12s ease-in-out infinite alternate;
+    filter:blur(95px);
+    opacity:.32;
+    animation:moveGlow 13s ease-in-out infinite alternate;
 }
 
 .glow1{
-    background:#e56ab1;
-    top:-120px;
+    background:#d95ca5;
+    top:-130px;
     left:-100px;
 }
 
 .glow2{
-    background:#7463e8;
+    background:#6559d9;
     right:-120px;
-    bottom:-100px;
+    bottom:-120px;
     animation-delay:4s;
 }
 
 @keyframes moveGlow{
-
     0%{
         transform:translate(0,0) scale(1);
     }
 
     100%{
-        transform:translate(100px,-70px) scale(1.3);
+        transform:translate(110px,-70px) scale(1.3);
     }
-
 }
 
-/* ================= النجوم ================= */
+/* النجوم */
 
 .star{
     position:fixed;
@@ -102,12 +85,10 @@ body{
     opacity:.35;
     z-index:-5;
 
-    animation:
-        twinkle 3s infinite alternate;
+    animation:twinkle 3s infinite alternate;
 }
 
 @keyframes twinkle{
-
     from{
         opacity:.15;
         transform:scale(.7);
@@ -117,10 +98,9 @@ body{
         opacity:.9;
         transform:scale(1.3);
     }
-
 }
 
-/* ================= المحتوى ================= */
+/* المحتوى */
 
 .container{
     width:100%;
@@ -130,7 +110,7 @@ body{
     text-align:center;
 }
 
-/* ================= البداية ================= */
+/* البداية */
 
 .hero{
     min-height:100vh;
@@ -144,7 +124,6 @@ body{
 }
 
 @keyframes heroAppear{
-
     from{
         opacity:0;
         transform:translateY(25px);
@@ -154,19 +133,16 @@ body{
         opacity:1;
         transform:translateY(0);
     }
-
 }
 
 .cake{
     font-size:80px;
     margin-bottom:25px;
 
-    animation:
-        floating 3s ease-in-out infinite;
+    animation:floating 3s ease-in-out infinite;
 }
 
 @keyframes floating{
-
     0%,100%{
         transform:translateY(0);
     }
@@ -174,7 +150,6 @@ body{
     50%{
         transform:translateY(-15px);
     }
-
 }
 
 .hero h1{
@@ -189,17 +164,14 @@ body{
 
 .hero p{
     max-width:650px;
-
     color:#ead9e8;
-
     font-size:18px;
     line-height:2;
 }
 
-/* ================= زر المفاجأة ================= */
+/* الزر */
 
 .open-btn{
-
     margin-top:35px;
 
     padding:16px 38px;
@@ -231,30 +203,21 @@ body{
 }
 
 .open-btn:hover{
-
     transform:scale(1.08);
-
-    box-shadow:
-        0 15px 45px rgba(230,100,190,.3);
 }
 
 .open-btn:active{
-
     transform:scale(.95);
-
 }
 
-/* ================= المفاجأة ================= */
+/* المفاجأة */
 
 #gift{
     display:none;
-
-    animation:
-        giftAppear 1.5s ease;
+    animation:giftAppear 1.5s ease;
 }
 
 @keyframes giftAppear{
-
     from{
         opacity:0;
         transform:translateY(50px);
@@ -264,24 +227,19 @@ body{
         opacity:1;
         transform:translateY(0);
     }
-
 }
 
-/* ================= الرسالة ================= */
+/* الكروت */
 
 .card{
-
     margin-bottom:45px;
-
-    padding:35px 25px;
+    padding:38px 25px;
 
     border-radius:30px;
 
-    background:
-        rgba(255,255,255,.065);
+    background:rgba(255,255,255,.065);
 
-    border:
-        1px solid rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.14);
 
     backdrop-filter:blur(15px);
 
@@ -290,62 +248,41 @@ body{
 }
 
 .card h2{
-
     color:#f3b7dd;
-
     font-size:30px;
-
-    margin-bottom:22px;
+    margin-bottom:25px;
 }
 
 .card p{
-
     color:#f5e7f2;
-
     font-size:18px;
-
-    line-height:2.25;
+    line-height:2.35;
 }
 
 .card strong{
-
     color:white;
-
 }
 
-/* ================= عنوان الصور ================= */
+/* الصور */
 
 .gallery-title{
-
     color:#f3b7dd;
-
     font-size:29px;
-
     margin-bottom:22px;
 }
 
-/* ================= الصور ================= */
-
 .gallery{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:15px;
 }
 
 .photo{
-
     overflow:hidden;
-
     border-radius:25px;
-
     aspect-ratio:1/1;
 
-    border:
-        1px solid rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.16);
 
     box-shadow:
         0 15px 40px rgba(0,0,0,.4);
@@ -356,8 +293,7 @@ body{
         translateY(35px)
         scale(.96);
 
-    animation:
-        photoAppear 1s forwards;
+    animation:photoAppear 1s forwards;
 }
 
 .photo:nth-child(1){
@@ -385,61 +321,43 @@ body{
 }
 
 @keyframes photoAppear{
-
     to{
-
         opacity:1;
-
         transform:
             translateY(0)
             scale(1);
     }
-
 }
 
 .photo img{
-
     width:100%;
     height:100%;
-
     object-fit:cover;
-
     display:block;
-
-    transition:
-        transform 1s ease;
+    transition:1s ease;
 }
 
 .photo:hover img{
-
-    transform:
-        scale(1.07);
+    transform:scale(1.07);
 }
 
-/* ================= الرسالة الأخيرة ================= */
+/* النهاية */
 
 .final-card{
-
     margin-top:45px;
 }
 
 .final-card p{
-
     font-size:18px;
-
     line-height:2.3;
 }
 
-/* ================= القلوب ================= */
+/* القلوب */
 
 .heart{
-
     position:fixed;
-
     bottom:-40px;
-
     z-index:50;
-
     pointer-events:none;
 
     animation:
@@ -452,7 +370,6 @@ body{
 @keyframes heartRise{
 
     0%{
-
         transform:
             translateY(0)
             scale(.6)
@@ -462,12 +379,10 @@ body{
     }
 
     15%{
-
         opacity:1;
     }
 
     100%{
-
         transform:
             translateY(-110vh)
             scale(1.2)
@@ -475,21 +390,17 @@ body{
 
         opacity:0;
     }
-
 }
 
-/* ================= الفوتر ================= */
+/* الفوتر */
 
 footer{
-
     margin-top:60px;
-
     color:#927b91;
-
     font-size:13px;
 }
 
-/* ================= الموبايل ================= */
+/* الموبايل */
 
 @media(max-width:600px){
 
@@ -506,11 +417,12 @@ footer{
     }
 
     .card{
-        padding:28px 18px;
+        padding:30px 18px;
     }
 
     .card p{
         font-size:16px;
+        line-height:2.25;
     }
 
     .gallery{
@@ -527,9 +439,7 @@ footer{
 
 </head>
 
-
 <body>
-
 
 <!-- الخلفية -->
 
@@ -544,8 +454,7 @@ footer{
 
 <div class="container">
 
-
-<!-- ================= البداية ================= -->
+<!-- البداية -->
 
 <section class="hero">
 
@@ -553,465 +462,308 @@ footer{
         🎂
     </div>
 
-
     <h1>
-        كل سنة وانتي طيبة يا شهد ❤️
+        كل سنة وانتي طيبة يا شهد 🤍
     </h1>
-
 
     <p>
 
-        يمكن معرفتنا لسه جديدة...
+        في ناس بتعرفهم وبتعدي الأيام عادي...
 
         <br>
 
-        بس في ناس وجودها بيكون لطيف
-        من أول مرة. ✨
+        وفي ناس من أول ما تعرفهم
+        بتحس إن وجودهم مختلف شوية. ✨
 
         <br>
 
-        وعشان كده كان لازم يكون ليكي
-        حاجة مخصوص في يومك.
+        وعشان كده كان لازم يومك
+        ياخد مني حاجة مختلفة.
 
     </p>
-
 
     <button
         class="open-btn"
         onclick="openGift()"
     >
-
         🎁 افتحي المفاجأة
-
     </button>
 
 </section>
 
 
-
-<!-- ================= المفاجأة ================= -->
+<!-- المفاجأة -->
 
 <section id="gift">
-
 
 <!-- الرسالة -->
 
 <div class="card">
 
     <h2>
-        💌 شهد... دي ليكي
+        💌 شهد... قبل ما تقري
     </h2>
-
 
     <p>
 
-        شهد… كل سنة وانتي طيبة
-        يا أجمل صدفة حصلتلي ❤️🎂
+        كل سنة وانتي طيبة يا شهد،
+        وعقبال سنين كتير تكون أحلى من اللي قبلها،
+        وتكون كل سنة فيهم أقرب للحاجات اللي نفسك فيها. 🎂🤍
 
         <br><br>
 
-
-        مش عارف أقولك إزاي،
-        بس رغم إن معرفتنا لسه جديدة،
-        إلا إنك قدرتي تاخدي مكان لطيف
-        جدًا عندي في وقت قصير.
+        بصراحة أنا كنت ممكن أكتفي بكلمتين:
+        "كل سنة وانتي طيبة"،
+        وأمشي الموضوع عادي جدًا...
 
         <br><br>
 
-
-        يمكن بدري شوية إني أقول الكلام ده،
-        بس أنا بصراحة مش هعرف أمثل 😂
+        بس حسيت إن ده مش مناسب،
+        لأنك مش من النوع اللي أحب أتعامل معاه بشكل عادي.
 
         <br><br>
 
+        يمكن إحنا لسه عارفين بعض من وقت قريب،
+        ومش هعمل نفسي عارف عنك كل حاجة،
+        بالعكس...
+        أنا لسه عندي فضول أعرفك أكتر.
+
+        <br><br>
+
+        بس من أول الكلام بينا،
+        كان في حاجة مميزة خلتني أخد بالي منك.
+
+        مش هقولك إيه بالظبط،
+        عشان أسيبلك فرصة تفكري فيها بنفسك. 😉
+
+        <br><br>
+
+        يمكن طريقة كلامك،
+        يمكن شخصيتك،
+        يمكن تفاصيل صغيرة بتعمليها من غير ما تاخدي بالك...
+
+        أو يمكن ببساطة
+        إن وجودك نفسه له إحساس مختلف.
+
+        <br><br>
+
+        وأنا بصراحة من النوع اللي لما حد يلفت انتباهه،
+        مش بيحب يمثل إنه مش واخد باله.
+
+        <br><br>
 
         <strong>
 
-        أنا معجب بيكي…
-        وبطريقة كلامك،
-        وبشخصيتك،
-        وبالتفاصيل الصغيرة اللي فيكي
-        واللي يمكن انتي مش واخدة بالك منها أصلًا. ❤️
+        عشان كده هقولها ببساطة ومن غير كلام كتير:
+
+        انتي لفتِ نظري يا شهد. ❤️
 
         </strong>
 
         <br><br>
 
-
-        وعشان كده عيد ميلادك
-        مكنش ينفع يعدي كأنه يوم عادي.
-
-        <br><br>
-
-
-        كان لازم أعملك حاجة مخصوص،
-        حاجة لما تشوفيها تعرفي إن في حد
-        كان عايز يخلي يومك أحلى
-        ولو بحاجة بسيطة. 🥹❤️
+        بس في نفس الوقت،
+        أنا مش مستعجل حاجة،
+        ومش محتاج أدي الموضوع أكبر من حجمه.
 
         <br><br>
 
+        أنا شايف إن أحلى حاجة في أي معرفة
+        إنها تاخد وقتها الطبيعي...
 
-        وأنا مش هقولك كلام كبير
-        من نوعية:
+        كلام،
+        وضحك،
+        ومواقف،
+        ومع الوقت كل واحد يعرف التاني أكتر.
+
+        <br><br>
+
+        وصدقيني،
+        أنا عندي فضول أعرف
+        شهد اللي محدش بياخد باله منها.
 
         <br>
 
-        "أنتي أهم شخص في حياتي" 😂
+        مش بس شهد اللي بتظهر للناس...
+
+        <br>
+
+        لكن شهد الحقيقية،
+        اللي بتفرح من إيه،
+        بتزعل من إيه،
+        بتحب إيه،
+        وإيه التفاصيل اللي ممكن تخلي يومها أحسن.
 
         <br><br>
 
+        ويمكن أجمل حاجة في الموضوع
+        إننا لسه في البداية.
 
-        لأننا لسه في بداية حكاية
-        معرفش نهايتها إيه…
+        <br>
+
+        مفيش توقعات،
+        مفيش كلام محفوظ،
+        ومفيش حكاية لازم نمشي عليها.
 
         <br><br>
 
+        مجرد اتنين لسه بيتعرفوا على بعض،
+        وكل يوم ممكن يكتشفوا حاجة جديدة.
+
+        <br><br>
+
+        وده تحديدًا اللي عاجبني.
+
+        <br><br>
 
         <strong>
 
-        بس اللي أعرفه إني مبسوط إني عرفتك،
-        ومبسوط أكتر إن لسه قدامنا وقت
-        نعرف بعض أكتر. ❤️
+        فـ في عيد ميلادك،
+        أتمنى قبل أي حاجة
+        إنك تكوني مبسوطة.
 
         </strong>
 
         <br><br>
 
-
-        أتمنى سنتك الجديدة تكون
-        مليانة ضحك،
-        ونجاح،
-        وحاجات حلوة شبهك…
-
-        <br><br>
-
-
-        وأتمنى أكون واحد من الناس
-        اللي يقدروا يضيفوا ليومك
-        حاجة حلوة،
-        مش مجرد شخص عدى في حياتك وخلاص. ✨
+        أتمنى السنة الجديدة من عمرك
+        تكون فيها راحة أكتر،
+        ضحك أكتر،
+        نجاحات تستاهليها،
+        وناس حواليكي يعرفوا قيمتك فعلًا.
 
         <br><br>
 
+        وأتمنى كل حاجة نفسك فيها
+        تلاقي طريقها ليكي في الوقت الصح.
+
+        <br><br>
+
+        وأنا؟
+        أنا مبسوط إني كنت واحد من الناس
+        اللي عرفوا شهد في بداية سنة جديدة من عمرها.
+
+        <br><br>
+
+        ومش هقولك إنك بقيتي أهم حد في حياتي،
+        ولا هقولك كلام كبير ملوش لازمة...
+
+        <br><br>
+
+        لأننا لسه في البداية،
+        وأنا بحب إن الكلام يبقى على قد الحقيقة.
+
+        <br><br>
 
         <strong>
 
-        كل سنة وانتي طيبة يا شهد ❤️
-
-        <br>
-
-        ويارب السنة دي تكون بداية
-        لحاجات حلوة كتير…
-
-        <br>
-
-        يمكن من ضمنها
-        إننا نقرب من بعض أكتر. 😉
+        والحقيقة إنك شدّيتي انتباهي،
+        وحبيت طريقتك،
+        وحابب أعرفك أكتر.
 
         </strong>
 
         <br><br>
 
+        والباقي؟
 
-        🎂 Happy Birthday Shahd
+        <br>
 
+        نخليه للأيام...
 
         <br><br>
 
+        يمكن الأيام تثبت إن الإحساس الأول
+        كان في مكانه.
+
+        <br>
+
+        ويمكن تخلينا نضحك بعدين
+        على إن دي كانت مجرد بداية بسيطة
+        لحاجة أحلى.
+
+        <br><br>
+
+        المهم إنك النهارده
+        تبتسمي وتتبسطي.
+
+        <br>
+
+        والباقي سيبيه عليا...
+        أقصد سيبيه للأيام. 😂❤️
+
+        <br><br>
 
         <strong>
-            وخلي بالك…
-            دي مجرد البداية 😌❤️
+
+        كل سنة وانتي طيبة يا شهد،
+        وكل سنة وانتي أجمل وأهدى
+        وأقرب لكل حاجة نفسك فيها.
+
+        </strong>
+
+        <br><br>
+
+        Happy Birthday Shahd 🎂✨
+
+        <br><br>
+
+        <strong>
+
+        وبالمناسبة...
+
+        <br>
+
+        لو سألتي نفسك ليه عملت كل ده
+        وإحنا لسه عارفين بعض...
+
+        <br>
+
+        اعتبريها مجاملة صغيرة
+        لشخص شد انتباهي. 😉
+
         </strong>
 
     </p>
 
 </div>
-
 
 
 <!-- الصور -->
 
 <h2 class="gallery-title">
 
-    📸 صور مخصوص ليكي
+    📸 شوية تفاصيل حلوة
 
 </h2>
 
 
 <div class="gallery">
 
-
     <div class="photo">
-
         <img
             src="FB_IMG_1786485239590.jpg"
-            alt="شهد"
-        >
-
+            alt="شهد">
     </div>
 
-
     <div class="photo">
-
         <img
             src="FB_IMG_1786485220646.jpg"
-            alt="شهد"
-        >
-
+            alt="شهد">
     </div>
 
-
     <div class="photo">
-
         <img
             src="FB_IMG_1786485215346.jpg"
-            alt="شهد"
-        >
-
+            alt="شهد">
     </div>
 
-
     <div class="photo">
-
         <img
             src="FB_IMG_1786485157172.jpg"
-            alt="شهد"
-        >
-
+            alt="شهد">
     </div>
-
 
     <div class="photo">
-
         <img
-            src="FB_IMG_1786485133301.jpg"
-            alt="شهد"
-        >
-
-    </div>
-
-
-    <div class="photo">
-
-        <img
-            src="FB_IMG_1786485000292.jpg"
-            alt="شهد"
-        >
-
-    </div>
-
-
-</div>
-
-
-
-<!-- النهاية -->
-
-<div class="card final-card">
-
-    <h2>
-        💗 وآخر حاجة...
-    </h2>
-
-
-    <p>
-
-        أتمنى يوم ميلادك يكون
-        هادي وجميل زي قلبك،
-        وتفضلي دايمًا مبتسمة.
-
-        <br><br>
-
-
-        ويمكن معرفتنا لسه في بدايتها،
-        بس أنا مبسوط إنها بدأت.
-
-        <br><br>
-
-
-        ومين عارف…
-
-        <br>
-
-        يمكن الأيام الجاية
-        يكون فيها حاجات أحلى بكتير. 😉
-
-        <br><br>
-
-
-        <strong>
-
-            Happy Birthday Shahd 🎂❤️
-
-        </strong>
-
-        <br><br>
-
-
-        <strong>
-
-            خلي بالك…
-
-            <br>
-
-            دي مجرد البداية. 🌙❤️
-
-        </strong>
-
-    </p>
-
-</div>
-
-
-</section>
-
-
-
-<footer>
-
-    Made with ❤️ especially for Shahd
-
-</footer>
-
-
-</div>
-
-
-
-<script>
-
-
-/* ================= النجوم ================= */
-
-for(let i = 0; i < 90; i++){
-
-    const star =
-        document.createElement("div");
-
-    star.className = "star";
-
-    star.style.left =
-        Math.random() * 100 + "vw";
-
-    star.style.top =
-        Math.random() * 100 + "vh";
-
-    star.style.animationDelay =
-        Math.random() * 3 + "s";
-
-    document.body.appendChild(star);
-
-}
-
-
-
-/* ================= فتح المفاجأة ================= */
-
-function openGift(){
-
-    const gift =
-        document.getElementById("gift");
-
-
-    gift.style.display =
-        "block";
-
-
-    setTimeout(function(){
-
-        gift.scrollIntoView({
-
-            behavior:"smooth",
-
-            block:"start"
-
-        });
-
-    },150);
-
-
-    createHearts();
-
-}
-
-
-
-/* ================= القلوب ================= */
-
-function createHearts(){
-
-    for(let i = 0; i < 35; i++){
-
-        setTimeout(function(){
-
-            const heart =
-                document.createElement("div");
-
-
-            heart.className =
-                "heart";
-
-
-            const hearts = [
-
-                "❤️",
-                "💗",
-                "💖",
-                "💕",
-                "🤍",
-                "✨"
-
-            ];
-
-
-            heart.innerHTML =
-                hearts[
-                    Math.floor(
-                        Math.random()
-                        * hearts.length
-                    )
-                ];
-
-
-            heart.style.left =
-                Math.random()
-                * 100
-                + "vw";
-
-
-            heart.style.fontSize =
-                (14 + Math.random() * 14)
-                + "px";
-
-
-            heart.style.animationDuration =
-                (4 + Math.random() * 4)
-                + "s";
-
-
-            document.body.appendChild(
-                heart
-            );
-
-
-            setTimeout(function(){
-
-                heart.remove();
-
-            },8000);
-
-
-        }, i * 180);
-
-    }
-
-}
-
-</script>
-
-
-</body>
-
-</html>
+           
