@@ -1,569 +1,613 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>عيد ميلاد شهد 🎂❤️</title>
+<title>إلى شهد ❤️</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    body {
-      font-family: Arial, Tahoma, sans-serif;
-      background:
-        radial-gradient(circle at top, #5b145f 0%, transparent 45%),
-        linear-gradient(135deg, #100014, #30052f, #120015);
-      color: white;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    /* النجوم */
-    .stars {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 0;
-    }
+body{
+  font-family:Tahoma,Arial,sans-serif;
+  color:#fff;
+  min-height:100vh;
+  overflow-x:hidden;
+  background:#08000d;
+}
 
-    .star {
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      background: white;
-      border-radius: 50%;
-      opacity: .7;
-      animation: twinkle 2s infinite alternate;
-    }
+/* الخلفية المتحركة */
+.background{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  z-index:-5;
+  background:
+    radial-gradient(circle at 20% 20%,#562052,transparent 35%),
+    radial-gradient(circle at 80% 70%,#24164d,transparent 40%),
+    linear-gradient(135deg,#08000d,#180b20,#09000f);
+}
 
-    @keyframes twinkle {
-      from {
-        opacity: .2;
-        transform: scale(.7);
-      }
+.glow{
+  position:absolute;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  filter:blur(80px);
+  opacity:.35;
+  animation:moveGlow 12s infinite alternate ease-in-out;
+}
 
-      to {
-        opacity: 1;
-        transform: scale(1.3);
-      }
-    }
+.glow.one{
+  background:#d85b9f;
+  top:-100px;
+  left:-100px;
+}
 
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px 15px 60px;
-      text-align: center;
-    }
+.glow.two{
+  background:#6954d9;
+  right:-100px;
+  bottom:-100px;
+  animation-delay:3s;
+}
 
-    /* البداية */
-    .hero {
-      min-height: 92vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+@keyframes moveGlow{
+  0%{
+    transform:translate(0,0) scale(1);
+  }
+  100%{
+    transform:translate(100px,-60px) scale(1.3);
+  }
+}
 
-    .cake {
-      font-size: 80px;
-      animation: float 2.5s ease-in-out infinite;
-      filter: drop-shadow(0 0 20px rgba(255, 120, 210, .5));
-      margin-bottom: 20px;
-    }
+/* النجوم */
+.star{
+  position:fixed;
+  width:3px;
+  height:3px;
+  background:#fff;
+  border-radius:50%;
+  opacity:.5;
+  animation:blink 3s infinite alternate;
+  z-index:-2;
+}
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
+@keyframes blink{
+  from{opacity:.15}
+  to{opacity:.9}
+}
 
-      50% {
-        transform: translateY(-15px);
-      }
-    }
+.container{
+  width:100%;
+  max-width:900px;
+  margin:auto;
+  padding:20px 15px 70px;
+  text-align:center;
+}
 
-    .hero h1 {
-      font-size: 46px;
-      line-height: 1.3;
-      margin-bottom: 18px;
-      text-shadow: 0 0 25px rgba(255, 150, 220, .7);
-    }
+/* شاشة البداية */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
 
-    .hero p {
-      max-width: 680px;
-      color: #ffdff5;
-      font-size: 19px;
-      line-height: 1.9;
-    }
+.cake{
+  font-size:80px;
+  animation:float 3s ease-in-out infinite;
+  margin-bottom:25px;
+}
 
-    /* زر المفاجأة */
-    .btn {
-      margin-top: 32px;
-      padding: 16px 35px;
-      border: none;
-      border-radius: 50px;
-      background: linear-gradient(45deg, #ff3f9f, #a83cff);
-      color: white;
-      font-size: 19px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 10px 35px rgba(255, 63, 159, .35);
-      transition: .3s;
-    }
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-14px)}
+}
 
-    .btn:hover {
-      transform: scale(1.07);
-    }
+.hero h1{
+  font-size:45px;
+  line-height:1.5;
+  margin-bottom:18px;
+  text-shadow:0 0 30px #e58ac8;
+}
 
-    .btn:active {
-      transform: scale(.96);
-    }
+.hero p{
+  color:#ead7e8;
+  font-size:18px;
+  line-height:2;
+  max-width:650px;
+}
 
-    /* المحتوى */
-    #gift {
-      display: none;
-      animation: appear 1s ease;
-    }
+.open-btn{
+  margin-top:35px;
+  padding:16px 35px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:50px;
+  background:rgba(255,255,255,.09);
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  backdrop-filter:blur(12px);
+  box-shadow:0 10px 40px rgba(0,0,0,.3);
+  transition:.4s;
+}
 
-    @keyframes appear {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
+.open-btn:hover{
+  transform:scale(1.06);
+  background:rgba(255,255,255,.16);
+}
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+/* المحتوى */
+#gift{
+  display:none;
+  animation:showGift 1.5s ease;
+}
 
-    /* الرسالة */
-    .message {
-      background: rgba(255, 255, 255, .08);
-      border: 1px solid rgba(255, 255, 255, .15);
-      backdrop-filter: blur(12px);
-      border-radius: 28px;
-      padding: 35px 25px;
-      margin: 20px 0 45px;
-      line-height: 2;
-      font-size: 18px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
-    }
+@keyframes showGift{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
-    .message h2 {
-      font-size: 30px;
-      color: #ffb8e4;
-      margin-bottom: 20px;
-    }
+/* الرسالة */
+.card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:30px;
+  padding:35px 24px;
+  backdrop-filter:blur(15px);
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  margin-bottom:45px;
+}
 
-    .message p {
-      color: #ffe9f8;
-    }
+.card h2{
+  color:#f3b9df;
+  font-size:29px;
+  margin-bottom:22px;
+}
 
-    .message strong {
-      color: #ffffff;
-    }
+.card p{
+  color:#f6e8f3;
+  font-size:18px;
+  line-height:2.2;
+}
 
-    /* عنوان الصور */
-    .gallery-title {
-      font-size: 28px;
-      color: #ffb8e4;
-      margin-bottom: 20px;
-    }
+.card strong{
+  color:#fff;
+}
 
-    /* الصور */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
+/* الصور */
+.title{
+  color:#f3b9df;
+  font-size:28px;
+  margin-bottom:20px;
+}
 
-    .photo {
-      position: relative;
-      overflow: hidden;
-      border-radius: 22px;
-      aspect-ratio: 1 / 1;
-      border: 2px solid rgba(255, 255, 255, .16);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, .4);
-      background: rgba(255, 255, 255, .05);
-    }
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
 
-    .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .6s ease;
-    }
+.photo{
+  opacity:0;
+  transform:translateY(30px);
+  animation:photoShow 1s forwards;
+  overflow:hidden;
+  border-radius:24px;
+  aspect-ratio:1/1;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
 
-    .photo:hover img {
-      transform: scale(1.08);
-    }
+.photo:nth-child(1){animation-delay:.2s}
+.photo:nth-child(2){animation-delay:.5s}
+.photo:nth-child(3){animation-delay:.8s}
+.photo:nth-child(4){animation-delay:1.1s}
+.photo:nth-child(5){animation-delay:1.4s}
+.photo:nth-child(6){animation-delay:1.7s}
 
-    /* الرسالة الأخيرة */
-    .secret {
-      margin-top: 45px;
-      padding: 35px 25px;
-      border-radius: 28px;
-      background: rgba(255, 255, 255, .07);
-      border: 1px solid rgba(255, 255, 255, .13);
-      box-shadow: 0 15px 45px rgba(0, 0, 0, .25);
-    }
+@keyframes photoShow{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
-    .secret h2 {
-      color: #ffb8e4;
-      margin-bottom: 20px;
-      font-size: 28px;
-    }
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:1s;
+}
 
-    .secret p {
-      color: #ffe5f6;
-      font-size: 19px;
-      line-height: 2;
-    }
+.photo:hover img{
+  transform:scale(1.06);
+}
 
-    footer {
-      margin-top: 55px;
-      color: #c99cbd;
-      font-size: 14px;
-    }
+/* النهاية */
+.final{
+  margin-top:45px;
+}
 
-    /* القلوب */
-    .heart {
-      position: fixed;
-      bottom: -40px;
-      font-size: 22px;
-      animation: rise 5s linear forwards;
-      pointer-events: none;
-      z-index: 20;
-    }
+.final p{
+  font-size:18px;
+  line-height:2.2;
+  color:#f3e2ef;
+}
 
-    @keyframes rise {
-      0% {
-        transform: translateY(0) scale(.7) rotate(0deg);
-        opacity: 0;
-      }
+/* القلوب */
+.heart{
+  position:fixed;
+  bottom:-30px;
+  pointer-events:none;
+  z-index:10;
+  animation:heartUp 6s linear forwards;
+}
 
-      20% {
-        opacity: 1;
-      }
+@keyframes heartUp{
+  0%{
+    transform:translateY(0) scale(.7);
+    opacity:0;
+  }
 
-      100% {
-        transform: translateY(-110vh) scale(1.2) rotate(30deg);
-        opacity: 0;
-      }
-    }
+  15%{
+    opacity:1;
+  }
 
-    /* موبايل */
-    @media (max-width: 600px) {
+  100%{
+    transform:translateY(-110vh) rotate(25deg);
+    opacity:0;
+  }
+}
 
-      .container {
-        padding-left: 12px;
-        padding-right: 12px;
-      }
+footer{
+  margin-top:55px;
+  color:#9e819c;
+  font-size:13px;
+}
 
-      .hero h1 {
-        font-size: 34px;
-      }
+@media(max-width:600px){
 
-      .hero p {
-        font-size: 17px;
-      }
+  .hero h1{
+    font-size:34px;
+  }
 
-      .cake {
-        font-size: 70px;
-      }
+  .hero p{
+    font-size:16px;
+  }
 
-      .message {
-        padding: 28px 18px;
-        font-size: 16px;
-      }
+  .cake{
+    font-size:70px;
+  }
 
-      .message h2,
-      .secret h2 {
-        font-size: 25px;
-      }
+  .card{
+    padding:28px 18px;
+  }
 
-      .secret p {
-        font-size: 17px;
-      }
+  .card p{
+    font-size:16px;
+  }
 
-      .gallery {
-        gap: 10px;
-      }
-    }
-  </style>
+  .gallery{
+    gap:9px;
+  }
+
+}
+</style>
 </head>
 
 <body>
 
-  <!-- النجوم -->
-  <div class="stars"></div>
+<!-- الخلفية -->
+<div class="background">
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+</div>
 
-  <div class="container">
+<!-- الموسيقى -->
+<audio id="music" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
-    <!-- شاشة البداية -->
-    <section class="hero">
+<div class="container">
 
-      <div class="cake">🎂</div>
+  <!-- البداية -->
+  <section class="hero">
 
-      <h1>
-        كل سنة وانتي طيبة يا شهد ❤️
-      </h1>
+    <div class="cake">🎂</div>
 
-      <p>
-        يمكن إحنا لسه عارفين بعض من وقت قريب...
-        <br>
-        بس كان لازم يكون ليكي حاجة صغيرة ومختلفة في يوم زي ده ✨
-      </p>
+    <h1>
+      كل سنة وانتي طيبة يا شهد ❤️
+    </h1>
 
-      <button class="btn" onclick="openGift()">
-        🎁 افتحي المفاجأة
-      </button>
+    <p>
+      يمكن معرفتنا لسه جديدة...
+      <br>
+      بس في ناس وجودها بيكون لطيف من أول مرة ✨
+      <br>
+      وعشان كده كان لازم أعملك حاجة مخصوص.
+    </p>
 
-    </section>
+    <button class="open-btn" onclick="openGift()">
+      🎁 افتحي المفاجأة
+    </button>
 
-
-    <!-- المفاجأة -->
-    <section id="gift">
-
-      <!-- الرسالة -->
-      <div class="message">
-
-        <h2>
-          💌 شهد... دي ليكي
-        </h2>
-
-        <p>
-
-          شهد… كل سنة وانتي طيبة يا أجمل صدفة حصلتلي ❤️🎂
-
-          <br><br>
-
-          مش عارف أقولك إزاي، بس رغم إن معرفتنا لسه جديدة،
-          إلا إنك قدرتي تاخدي مكان لطيف جدًا عندي في وقت قصير.
-
-          <br><br>
-
-          يمكن بدري شوية إني أقول الكلام ده،
-          بس أنا بصراحة مش هعرف أمثل 😂
-
-          <br>
-
-          <strong>
-            أنا معجب بيكي… وبطريقة كلامك، وبشخصيتك،
-            وبالتفاصيل الصغيرة اللي فيكي واللي يمكن انتي مش واخدة بالك منها أصلًا. ❤️
-          </strong>
-
-          <br><br>
-
-          وعشان كده عيد ميلادك مكنش ينفع يعدي كأنه يوم عادي.
-
-          كان لازم أعملك حاجة مخصوص،
-          حاجة لما تشوفيها تعرفي إن في حد كان عايز يخلي يومك أحلى
-          ولو بحاجة بسيطة. 🥹❤️
-
-          <br><br>
-
-          وأنا مش هقولك كلام كبير من نوعية
-          "أنتي أهم شخص في حياتي" 😂
-
-          لأننا لسه في بداية حكاية معرفش نهايتها إيه…
-
-          <br><br>
-
-          <strong>
-            بس اللي أعرفه إني مبسوط إني عرفتك،
-            ومبسوط أكتر إن لسه قدامنا وقت نعرف بعض أكتر. ❤️
-          </strong>
-
-          <br><br>
-
-          أتمنى سنتك الجديدة تكون مليانة ضحك،
-          ونجاح، وحاجات حلوة شبهك…
-
-          وأتمنى أكون واحد من الناس اللي يقدروا يضيفوا ليومك حاجة حلوة،
-          مش مجرد شخص عدى في حياتك وخلاص. ✨
-
-          <br><br>
-
-          <strong>
-            كل سنة وانتي طيبة يا شهد ❤️
-            <br>
-            ويارب السنة دي تكون بداية لحاجات حلوة كتير…
-            <br>
-            يمكن من ضمنها إننا نقرب من بعض أكتر. 😉❤️
-          </strong>
-
-          <br><br>
-
-          🎂 Happy Birthday Shahd
-
-          <br>
-
-          <strong>
-            وخلي بالك… دي مجرد البداية 😌❤️
-          </strong>
-
-        </p>
-
-      </div>
+  </section>
 
 
-      <!-- الصور -->
-      <h2 class="gallery-title">
-        📸 شوية صور مخصوص عشانك
+  <!-- المفاجأة -->
+  <section id="gift">
+
+    <div class="card">
+
+      <h2>
+        💌 شهد... دي ليكي
       </h2>
 
-      <div class="gallery">
+      <p>
 
-        <div class="photo">
-          <img src="photo1.jpg" alt="Shahd Photo 1">
-        </div>
+        شهد… كل سنة وانتي طيبة يا أجمل صدفة حصلتلي ❤️🎂
 
-        <div class="photo">
-          <img src="photo2.jpg" alt="Shahd Photo 2">
-        </div>
+        <br><br>
 
-        <div class="photo">
-          <img src="photo3.jpg" alt="Shahd Photo 3">
-        </div>
+        مش عارف أقولك إزاي، بس رغم إن معرفتنا لسه جديدة،
+        إلا إنك قدرتي تاخدي مكان لطيف جدًا عندي في وقت قصير.
 
-        <div class="photo">
-          <img src="photo4.jpg" alt="Shahd Photo 4">
-        </div>
+        <br><br>
 
+        يمكن بدري شوية إني أقول الكلام ده،
+        بس أنا بصراحة مش هعرف أمثل 😂
+
+        <br>
+
+        <strong>
+          أنا معجب بيكي… وبطريقة كلامك، وبشخصيتك،
+          وبالتفاصيل الصغيرة اللي فيكي واللي يمكن انتي مش واخدة بالك منها أصلًا. ❤️
+        </strong>
+
+        <br><br>
+
+        وعشان كده عيد ميلادك مكنش ينفع يعدي كأنه يوم عادي.
+
+        كان لازم أعملك حاجة مخصوص،
+        حاجة لما تشوفيها تعرفي إن في حد كان عايز يخلي يومك أحلى
+        ولو بحاجة بسيطة. 🥹❤️
+
+        <br><br>
+
+        وأنا مش هقولك كلام كبير من نوعية
+        "أنتي أهم شخص في حياتي" 😂
+
+        لأننا لسه في بداية حكاية معرفش نهايتها إيه…
+
+        <br><br>
+
+        <strong>
+          بس اللي أعرفه إني مبسوط إني عرفتك،
+          ومبسوط أكتر إن لسه قدامنا وقت نعرف بعض أكتر. ❤️
+        </strong>
+
+        <br><br>
+
+        أتمنى سنتك الجديدة تكون مليانة ضحك،
+        ونجاح، وحاجات حلوة شبهك…
+
+        وأتمنى أكون واحد من الناس اللي يقدروا يضيفوا ليومك حاجة حلوة،
+        مش مجرد شخص عدى في حياتك وخلاص. ✨
+
+        <br><br>
+
+        <strong>
+          كل سنة وانتي طيبة يا شهد ❤️
+          <br>
+          ويارب السنة دي تكون بداية لحاجات حلوة كتير…
+          <br>
+          يمكن من ضمنها إننا نقرب من بعض أكتر. 😉❤️
+        </strong>
+
+        <br><br>
+
+        🎂 Happy Birthday Shahd
+
+        <br>
+
+        <strong>
+          وخلي بالك… دي مجرد البداية 😌❤️
+        </strong>
+
+      </p>
+
+    </div>
+
+
+    <!-- الصور -->
+    <h2 class="title">
+      📸 حاجات حلوة تستاهل تتحفظ
+    </h2>
+
+    <div class="gallery">
+
+      <div class="photo">
+        <img src="FB_IMG_1786485239590.jpg" alt="شهد">
       </div>
 
-
-      <!-- الرسالة الأخيرة -->
-      <div class="secret">
-
-        <h2>
-          💗 وآخر حاجة...
-        </h2>
-
-        <p>
-
-          أتمنى اليوم ده يعدي عليكي بشكل جميل،
-          وتفضلي فاكرة إن في حد حب يعملك مفاجأة صغيرة
-          مخصوص عشان يخليكي تبتسمي.
-
-          <br><br>
-
-          ويمكن تكون دي بداية حكاية لطيفة،
-          لسه مش عارفين هتوصل لفين...
-          بس خلينا نشوف الأيام هتعمل إيه. 😉❤️
-
-          <br><br>
-
-          <strong>
-            Happy Birthday Shahd 🎂❤️✨
-          </strong>
-
-        </p>
-
+      <div class="photo">
+        <img src="FB_IMG_1786485220646.jpg" alt="شهد">
       </div>
 
-    </section>
+      <div class="photo">
+        <img src="FB_IMG_1786485215346.jpg" alt="شهد">
+      </div>
+
+      <div class="photo">
+        <img src="FB_IMG_1786485157172.jpg" alt="شهد">
+      </div>
+
+      <div class="photo">
+        <img src="FB_IMG_1786485133301.jpg" alt="شهد">
+      </div>
+
+      <div class="photo">
+        <img src="FB_IMG_1786485000292.jpg" alt="شهد">
+      </div>
+
+    </div>
 
 
-    <footer>
-      Made with ❤️ especially for Shahd
-    </footer>
+    <!-- النهاية -->
+    <div class="card final">
 
-  </div>
+      <h2>
+        💗 وآخر حاجة...
+      </h2>
 
+      <p>
 
-  <script>
+        أتمنى يوم ميلادك يكون هادي وجميل زي قلبك،
+        وتفضلي دايمًا مبتسمة.
 
-    /* إنشاء النجوم */
-    const stars = document.querySelector(".stars");
+        <br><br>
 
-    for (let i = 0; i < 80; i++) {
+        ويمكن معرفتنا لسه في بدايتها،
+        بس أنا مبسوط إنها بدأت.
 
-      const star = document.createElement("div");
+        <br><br>
 
-      star.className = "star";
+        ومين عارف...
+        يمكن الأيام الجاية يكون فيها حاجات أحلى بكتير. 😉
 
-      star.style.left = Math.random() * 100 + "%";
-      star.style.top = Math.random() * 100 + "%";
+        <br><br>
 
-      star.style.animationDelay =
-        Math.random() * 2 + "s";
+        <strong>
+          Happy Birthday Shahd 🎂❤️
+        </strong>
 
-      stars.appendChild(star);
-    }
+        <br><br>
 
+        خلي بالك...
+        <br>
+        <strong>دي مجرد البداية. 🌙❤️</strong>
 
-    /* فتح المفاجأة */
-    function openGift() {
+      </p>
 
-      const gift = document.getElementById("gift");
+    </div>
 
-      gift.style.display = "block";
-
-      setTimeout(() => {
-
-        gift.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-      }, 100);
-
-      createHearts();
-    }
+  </section>
 
 
-    /* القلوب المتحركة */
-    function createHearts() {
+  <footer>
+    Made with ❤️ especially for Shahd
+  </footer>
 
-      for (let i = 0; i < 30; i++) {
+</div>
 
-        setTimeout(() => {
 
-          const heart = document.createElement("div");
+<script>
 
-          heart.className = "heart";
+/* إنشاء النجوم */
+for(let i=0;i<90;i++){
 
-          const hearts = [
-            "❤️",
-            "💗",
-            "💖",
-            "💕",
-            "💓"
-          ];
+  const star=document.createElement("div");
 
-          heart.innerHTML =
-            hearts[Math.floor(Math.random() * hearts.length)];
+  star.className="star";
 
-          heart.style.left =
-            Math.random() * 100 + "vw";
+  star.style.left=Math.random()*100+"vw";
+  star.style.top=Math.random()*100+"vh";
 
-          heart.style.animationDuration =
-            (3 + Math.random() * 3) + "s";
+  star.style.animationDelay=Math.random()*3+"s";
 
-          document.body.appendChild(heart);
+  document.body.appendChild(star);
+}
 
-          setTimeout(() => {
-            heart.remove();
-          }, 6500);
 
-        }, i * 120);
+/* فتح المفاجأة وتشغيل الموسيقى */
+function openGift(){
 
-      }
+  const music=document.getElementById("music");
 
-    }
+  music.volume=0.35;
 
-  </script>
+  music.play().catch(()=>{});
+
+  const gift=document.getElementById("gift");
+
+  gift.style.display="block";
+
+  setTimeout(()=>{
+
+    gift.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+  },150);
+
+  createHearts();
+
+}
+
+
+/* قلوب هادئة */
+function createHearts(){
+
+  for(let i=0;i<35;i++){
+
+    setTimeout(()=>{
+
+      const heart=document.createElement("div");
+
+      heart.className="heart";
+
+      const list=[
+        "❤️",
+        "💗",
+        "💖",
+        "💕",
+        "🤍"
+      ];
+
+      heart.innerHTML=
+        list[Math.floor(Math.random()*list.length)];
+
+      heart.style.left=
+        Math.random()*100+"vw";
+
+      heart.style.fontSize=
+        (14+Math.random()*14)+"px";
+
+      heart.style.animationDuration=
+        (4+Math.random()*4)+"s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(()=>{
+        heart.remove();
+      },8000);
+
+    },i*180);
+
+  }
+
+}
+
+</script>
 
 </body>
 </html>
