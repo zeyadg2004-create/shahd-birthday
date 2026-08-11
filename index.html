@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>عيد ميلاد شهد 🎂❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Tahoma, sans-serif;
+      background:
+        radial-gradient(circle at top, #5b145f 0%, transparent 45%),
+        linear-gradient(135deg, #100014, #30052f, #120015);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* النجوم */
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: white;
+      border-radius: 50%;
+      opacity: .7;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from {
+        opacity: .2;
+        transform: scale(.7);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1.3);
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 15px 60px;
+      text-align: center;
+    }
+
+    /* البداية */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cake {
+      font-size: 80px;
+      animation: float 2.5s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px rgba(255, 120, 210, .5));
+      margin-bottom: 20px;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      line-height: 1.3;
+      margin-bottom: 18px;
+      text-shadow: 0 0 25px rgba(255, 150, 220, .7);
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: #ffdff5;
+      font-size: 19px;
+      line-height: 1.9;
+    }
+
+    /* زر المفاجأة */
+    .btn {
+      margin-top: 32px;
+      padding: 16px 35px;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ff3f9f, #a83cff);
+      color: white;
+      font-size: 19px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 10px 35px rgba(255, 63, 159, .35);
+      transition: .3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.07);
+    }
+
+    .btn:active {
+      transform: scale(.96);
+    }
+
+    /* المحتوى */
+    #gift {
+      display: none;
+      animation: appear 1s ease;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* الرسالة */
+    .message {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .15);
+      backdrop-filter: blur(12px);
+      border-radius: 28px;
+      padding: 35px 25px;
+      margin: 20px 0 45px;
+      line-height: 2;
+      font-size: 18px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
+    }
+
+    .message h2 {
+      font-size: 30px;
+      color: #ffb8e4;
+      margin-bottom: 20px;
+    }
+
+    .message p {
+      color: #ffe9f8;
+    }
+
+    .message strong {
+      color: #ffffff;
+    }
+
+    /* عنوان الصور */
+    .gallery-title {
+      font-size: 28px;
+      color: #ffb8e4;
+      margin-bottom: 20px;
+    }
+
+    /* الصور */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      aspect-ratio: 1 / 1;
+      border: 2px solid rgba(255, 255, 255, .16);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .4);
+      background: rgba(255, 255, 255, .05);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .6s ease;
+    }
+
+    .photo:hover img {
+      transform: scale(1.08);
+    }
+
+    /* الرسالة الأخيرة */
+    .secret {
+      margin-top: 45px;
+      padding: 35px 25px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .13);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, .25);
+    }
+
+    .secret h2 {
+      color: #ffb8e4;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .secret p {
+      color: #ffe5f6;
+      font-size: 19px;
+      line-height: 2;
+    }
+
+    footer {
+      margin-top: 55px;
+      color: #c99cbd;
+      font-size: 14px;
+    }
+
+    /* القلوب */
+    .heart {
+      position: fixed;
+      bottom: -40px;
+      font-size: 22px;
+      animation: rise 5s linear forwards;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(.7) rotate(0deg);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-110vh) scale(1.2) rotate(30deg);
+        opacity: 0;
+      }
+    }
+
+    /* موبايل */
+    @media (max-width: 600px) {
+
+      .container {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .cake {
+        font-size: 70px;
+      }
+
+      .message {
+        padding: 28px 18px;
+        font-size: 16px;
+      }
+
+      .message h2,
+      .secret h2 {
+        font-size: 25px;
+      }
+
+      .secret p {
+        font-size: 17px;
+      }
+
+      .gallery {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- النجوم -->
+  <div class="stars"></div>
+
+  <div class="container">
+
+    <!-- شاشة البداية -->
+    <section class="hero">
+
+      <div class="cake">🎂</div>
+
+      <h1>
+        كل سنة وانتي طيبة يا شهد ❤️
+      </h1>
+
+      <p>
+        يمكن إحنا لسه عارفين بعض من وقت قريب...
+        <br>
+        بس كان لازم يكون ليكي حاجة صغيرة ومختلفة في يوم زي ده ✨
+      </p>
+
+      <button class="btn" onclick="openGift()">
+        🎁 افتحي المفاجأة
+      </button>
+
+    </section>
+
+
+    <!-- المفاجأة -->
+    <section id="gift">
+
+      <!-- الرسالة -->
+      <div class="message">
+
+        <h2>
+          💌 شهد... دي ليكي
+        </h2>
+
+        <p>
+
+          شهد… كل سنة وانتي طيبة يا أجمل صدفة حصلتلي ❤️🎂
+
+          <br><br>
+
+          مش عارف أقولك إزاي، بس رغم إن معرفتنا لسه جديدة،
+          إلا إنك قدرتي تاخدي مكان لطيف جدًا عندي في وقت قصير.
+
+          <br><br>
+
+          يمكن بدري شوية إني أقول الكلام ده،
+          بس أنا بصراحة مش هعرف أمثل 😂
+
+          <br>
+
+          <strong>
+            أنا معجب بيكي… وبطريقة كلامك، وبشخصيتك،
+            وبالتفاصيل الصغيرة اللي فيكي واللي يمكن انتي مش واخدة بالك منها أصلًا. ❤️
+          </strong>
+
+          <br><br>
+
+          وعشان كده عيد ميلادك مكنش ينفع يعدي كأنه يوم عادي.
+
+          كان لازم أعملك حاجة مخصوص،
+          حاجة لما تشوفيها تعرفي إن في حد كان عايز يخلي يومك أحلى
+          ولو بحاجة بسيطة. 🥹❤️
+
+          <br><br>
+
+          وأنا مش هقولك كلام كبير من نوعية
+          "أنتي أهم شخص في حياتي" 😂
+
+          لأننا لسه في بداية حكاية معرفش نهايتها إيه…
+
+          <br><br>
+
+          <strong>
+            بس اللي أعرفه إني مبسوط إني عرفتك،
+            ومبسوط أكتر إن لسه قدامنا وقت نعرف بعض أكتر. ❤️
+          </strong>
+
+          <br><br>
+
+          أتمنى سنتك الجديدة تكون مليانة ضحك،
+          ونجاح، وحاجات حلوة شبهك…
+
+          وأتمنى أكون واحد من الناس اللي يقدروا يضيفوا ليومك حاجة حلوة،
+          مش مجرد شخص عدى في حياتك وخلاص. ✨
+
+          <br><br>
+
+          <strong>
+            كل سنة وانتي طيبة يا شهد ❤️
+            <br>
+            ويارب السنة دي تكون بداية لحاجات حلوة كتير…
+            <br>
+            يمكن من ضمنها إننا نقرب من بعض أكتر. 😉❤️
+          </strong>
+
+          <br><br>
+
+          🎂 Happy Birthday Shahd
+
+          <br>
+
+          <strong>
+            وخلي بالك… دي مجرد البداية 😌❤️
+          </strong>
+
+        </p>
+
+      </div>
+
+
+      <!-- الصور -->
+      <h2 class="gallery-title">
+        📸 شوية صور مخصوص عشانك
+      </h2>
+
+      <div class="gallery">
+
+        <div class="photo">
+          <img src="photo1.jpg" alt="Shahd Photo 1">
+        </div>
+
+        <div class="photo">
+          <img src="photo2.jpg" alt="Shahd Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="photo3.jpg" alt="Shahd Photo 3">
+        </div>
+
+        <div class="photo">
+          <img src="photo4.jpg" alt="Shahd Photo 4">
+        </div>
+
+      </div>
+
+
+      <!-- الرسالة الأخيرة -->
+      <div class="secret">
+
+        <h2>
+          💗 وآخر حاجة...
+        </h2>
+
+        <p>
+
+          أتمنى اليوم ده يعدي عليكي بشكل جميل،
+          وتفضلي فاكرة إن في حد حب يعملك مفاجأة صغيرة
+          مخصوص عشان يخليكي تبتسمي.
+
+          <br><br>
+
+          ويمكن تكون دي بداية حكاية لطيفة،
+          لسه مش عارفين هتوصل لفين...
+          بس خلينا نشوف الأيام هتعمل إيه. 😉❤️
+
+          <br><br>
+
+          <strong>
+            Happy Birthday Shahd 🎂❤️✨
+          </strong>
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      Made with ❤️ especially for Shahd
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    /* إنشاء النجوم */
+    const stars = document.querySelector(".stars");
+
+    for (let i = 0; i < 80; i++) {
+
+      const star = document.createElement("div");
+
+      star.className = "star";
+
+      star.style.left = Math.random() * 100 + "%";
+      star.style.top = Math.random() * 100 + "%";
+
+      star.style.animationDelay =
+        Math.random() * 2 + "s";
+
+      stars.appendChild(star);
+    }
+
+
+    /* فتح المفاجأة */
+    function openGift() {
+
+      const gift = document.getElementById("gift");
+
+      gift.style.display = "block";
+
+      setTimeout(() => {
+
+        gift.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }, 100);
+
+      createHearts();
+    }
+
+
+    /* القلوب المتحركة */
+    function createHearts() {
+
+      for (let i = 0; i < 30; i++) {
+
+        setTimeout(() => {
+
+          const heart = document.createElement("div");
+
+          heart.className = "heart";
+
+          const hearts = [
+            "❤️",
+            "💗",
+            "💖",
+            "💕",
+            "💓"
+          ];
+
+          heart.innerHTML =
+            hearts[Math.floor(Math.random() * hearts.length)];
+
+          heart.style.left =
+            Math.random() * 100 + "vw";
+
+          heart.style.animationDuration =
+            (3 + Math.random() * 3) + "s";
+
+          document.body.appendChild(heart);
+
+          setTimeout(() => {
+            heart.remove();
+          }, 6500);
+
+        }, i * 120);
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
